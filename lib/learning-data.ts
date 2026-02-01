@@ -1,0 +1,293 @@
+export interface Article {
+  id: string
+  title: string
+  category: string
+  readTime: string
+  summary: string
+  content: string[]
+  recommendedForMoods: number[] // 1-5 mood values
+}
+
+export const LEARNING_ARTICLES: Article[] = [
+  {
+    id: "understanding-stress",
+    title: "Understanding Stress and Its Effects",
+    category: "Mental Health Basics",
+    readTime: "5 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Learn about what stress is, how it affects your body and mind, and why it's important to manage it",
+    content: [
+      "Stress is your body's natural response to challenges or demands. When you perceive a threat or pressure, your nervous system releases stress hormones like cortisol and adrenaline. This is often called the 'fight or flight' response.",
+      "In small doses, stress can be helpful - it motivates you to meet deadlines, prepare for exams, or perform under pressure. However, chronic stress can take a toll on both your physical and mental health.",
+      "Common physical symptoms of stress include headaches, muscle tension, fatigue, sleep problems, and digestive issues. Mental symptoms include anxiety, restlessness, lack of focus, feeling overwhelmed, and irritability.",
+      "During exam preparation or work deadlines, stress is normal. The key is learning to recognize when stress becomes overwhelming and using healthy coping strategies to manage it.",
+      "Remember: experiencing stress doesn't mean you're weak. Everyone experiences stress. The difference lies in how you respond to it and the tools you use to manage it effectively.",
+    ],
+  },
+  {
+    id: "sleep-and-mental-health",
+    title: "The Connection Between Sleep and Mental Wellness",
+    category: "Healthy Habits",
+    readTime: "4 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Discover why quality sleep is essential for mental health and practical tips to improve your sleep",
+    content: [
+      "Sleep and mental health are deeply connected. Poor sleep can worsen anxiety and stress, while anxiety and stress can make it harder to sleep - creating a difficult cycle.",
+      "During sleep, your brain processes emotions and consolidates memories. Lack of sleep impairs your ability to manage emotions, make decisions, and handle stress. Even one night of poor sleep can affect your mood the next day.",
+      "For students and professionals, quality sleep is crucial for learning and performance. Research shows that sleep helps consolidate what you've learned, making it essential for exam preparation and skill development.",
+      "Practical sleep tips: maintain a consistent sleep schedule, create a relaxing bedtime routine, limit screen time before bed, keep your bedroom cool and dark, and avoid caffeine in the evening.",
+      "If you're struggling with persistent sleep problems, don't hesitate to seek support. Sleep issues are common and treatable, especially during stressful periods like exams or project deadlines.",
+    ],
+  },
+  {
+    id: "building-resilience",
+    title: "Building Resilience: Bouncing Back from Challenges",
+    category: "Personal Growth",
+    readTime: "6 min read",
+    recommendedForMoods: [2, 3, 4],
+    summary: "Learn practical strategies to develop resilience and cope better with life's challenges",
+    content: [
+      "Resilience is your ability to adapt and bounce back when things don't go as planned. It's not about avoiding stress or never feeling overwhelmed - it's about developing skills to cope with difficulties.",
+      "Building resilience starts with self-awareness. Notice your thoughts and emotions without judgment. When you fail an exam or face rejection, acknowledge your feelings instead of pushing them away.",
+      "Develop a growth mindset: view challenges as opportunities to learn rather than threats. When you encounter setbacks, ask yourself 'What can I learn from this?' instead of 'Why does this always happen to me?'",
+      "Build a support network. Connect with friends, family, or mentors you can talk to. Sometimes just expressing your feelings to someone who listens can significantly reduce stress.",
+      "Practice self-compassion. Treat yourself with the same kindness you'd offer a good friend. Replace self-criticism with understanding. Remember that everyone struggles, and setbacks are a normal part of growth.",
+      "Take care of your physical health. Regular exercise, nutritious food, and adequate sleep form the foundation of resilience. When your body is healthy, you're better equipped to handle mental challenges.",
+    ],
+  },
+  {
+    id: "productivity-without-burnout",
+    title: "Staying Productive Without Burning Out",
+    category: "Work & Study",
+    readTime: "5 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Balance productivity with self-care to achieve your goals without exhausting yourself",
+    content: [
+      "Productivity isn't about working non-stop until you're exhausted. Real productivity means working effectively while maintaining your mental and physical health.",
+      "The Pomodoro Technique can help: work focused for 25 minutes, then take a 5-minute break. After four sessions, take a longer 15-30 minute break. This prevents mental fatigue and maintains focus.",
+      "Recognize the difference between productive work and busy work. Spending 10 hours reviewing the same material isn't effective. Quality matters more than quantity.",
+      "Take regular breaks. Your brain needs rest to process information. During breaks, step away from your desk, move your body, or practice a breathing exercise. These breaks actually improve your productivity.",
+      "Set boundaries. Designate specific work/study hours and stick to them. When that time is over, allow yourself to truly rest. Continuous work leads to diminishing returns and eventual burnout.",
+      "Watch for burnout signs: chronic exhaustion, cynicism, feeling detached, decreased performance. If you notice these, it's time to step back and reassess your approach. It's okay to slow down.",
+    ],
+  },
+  {
+    id: "managing-exam-anxiety",
+    title: "Managing Exam and Performance Anxiety",
+    category: "Student Life",
+    readTime: "5 min read",
+    recommendedForMoods: [1, 2],
+    summary: "Practical strategies to manage anxiety before and during exams or important presentations",
+    content: [
+      "Exam anxiety is common among students and professionals. Some nervousness is normal and can even enhance performance. However, excessive anxiety can interfere with your ability to think clearly.",
+      "Preparation is your best defense against anxiety. Create a realistic study schedule well before the exam. Breaking material into manageable chunks reduces the feeling of being overwhelmed.",
+      "Before the exam: Get adequate sleep the night before. Eat a nutritious meal. Arrive early so you're not rushed. Avoid comparing your preparation with others - everyone's journey is different.",
+      "During the exam: If you feel panic rising, pause and take three slow, deep breaths. Read instructions carefully. Start with questions you find easier to build confidence. If you blank on a question, move on and return to it later.",
+      "Use positive self-talk. Replace 'I'm going to fail' with 'I've prepared for this' or 'I'll do my best.' Your internal dialogue significantly impacts your performance.",
+      "Remember perspective: one exam doesn't define your worth or future. Even if things don't go as planned, you can learn from the experience and try again. Your value extends far beyond any single performance.",
+    ],
+  },
+  {
+    id: "mindfulness-for-students",
+    title: "Mindfulness for Busy Students and Professionals",
+    category: "Mindfulness",
+    readTime: "6 min read",
+    recommendedForMoods: [3, 4],
+    summary: "Learn how to integrate mindfulness into your busy schedule without adding more to your plate",
+    content: [
+      "Mindfulness doesn't require hours of meditation. It's about bringing present-moment awareness to whatever you're doing. Even 2-3 minutes of mindfulness can reset your nervous system.",
+      "Start with micro-practices: one mindful breath between classes, eating one meal without your phone, or fully focusing on brushing your teeth. These small moments add up.",
+      "Use transitions mindfully. Walking between buildings? Feel your feet on the ground. Waiting for your computer to start? Take three conscious breaths. Turn idle moments into mindfulness opportunities.",
+      "The 'STOP' technique: Stop what you're doing. Take a breath. Observe your thoughts, feelings, and sensations. Proceed with awareness. This takes 30 seconds and can break stress cycles.",
+      "Mindfulness isn't about clearing your mind or feeling calm. It's about noticing what's happening without judgment. Stress, worry, or distraction are all valid experiences to be mindful of.",
+      "Research shows that regular mindfulness practice improves focus, memory, emotional regulation, and test performance. For students, it's not just self-care - it's a study tool.",
+    ],
+  },
+  {
+    id: "dealing-with-failure",
+    title: "Reframing Failure: Growing from Setbacks",
+    category: "Personal Growth",
+    readTime: "6 min read",
+    recommendedForMoods: [1, 2],
+    summary: "Change your relationship with failure and learn to see setbacks as opportunities for growth",
+    content: [
+      "Failure feels terrible, especially when you've worked hard. But your response to failure matters more than the failure itself. Every successful person has failed repeatedly - they just kept learning and trying.",
+      "When you fail at something, your brain's first response is often harsh self-judgment. Recognize this as a protective mechanism, not truth. Treat yourself as you'd treat a friend going through the same thing.",
+      "Ask better questions. Instead of 'Why am I so bad at this?' ask 'What can I learn?' Instead of 'Why does this always happen?' ask 'What would I do differently next time?'",
+      "Failure provides information. A failed exam shows which concepts need more study. A rejected application shows which skills to develop. Failed relationships teach you what you need and value.",
+      "Remember: failing at something doesn't make you a failure. You are not your performance. Your worth as a person is inherent and unchanging, regardless of your grades, achievements, or outcomes.",
+      "Create a 'failure resume' listing setbacks and what you learned from each. Many successful people credit their failures as their most important learning experiences.",
+    ],
+  },
+  {
+    id: "digital-wellness",
+    title: "Digital Wellness: Managing Screen Time and Social Media",
+    category: "Healthy Habits",
+    readTime: "5 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Find balance with technology and protect your mental health from digital overwhelm",
+    content: [
+      "The average person checks their phone 96 times per day. Constant connectivity creates chronic stress and makes it hard to focus or relax. Digital wellness means using technology intentionally, not reactively.",
+      "Social media comparison is a mental health trap. Remember: people share highlights, not reality. That student who seems perfect is also struggling with something. Comparing your behind-the-scenes to someone's highlight reel is unfair to yourself.",
+      "Try a digital sunset: set a time (like 9 PM) when you put devices away. Use this time for reading, journaling, talking with loved ones, or preparing for bed. Your sleep quality will improve significantly.",
+      "Turn off non-essential notifications. Every ping fragments your attention and spikes cortisol. Check apps on your schedule, not theirs. You don't need instant updates about everything.",
+      "Practice phone-free activities: eat one meal daily without screens, keep phones out of the bedroom, or try 'phone stacking' with friends (first person to check their phone pays for coffee).",
+      "Notice how you feel after using different apps. Some energize you, others drain you. Limit or eliminate apps that consistently make you feel worse about yourself or your life.",
+    ],
+  },
+  {
+    id: "imposter-syndrome",
+    title: "Understanding and Overcoming Imposter Syndrome",
+    category: "Personal Growth",
+    readTime: "7 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Recognize imposter syndrome and learn strategies to quiet your inner critic",
+    content: [
+      "Imposter syndrome is the persistent belief that you don't deserve your achievements and will be 'found out' as a fraud. About 70% of people experience this at some point, especially high achievers.",
+      "It's not about lacking confidence or competence. People with imposter syndrome often excel - they just attribute success to luck, timing, or fooling others rather than their own abilities.",
+      "Common thoughts: 'I only got in because they made a mistake.' 'Everyone else belongs here except me.' 'I'm not as smart as they think.' 'They're going to realize I don't know what I'm doing.' Sound familiar?",
+      "The root is often perfectionism and comparing your internal experience (doubts, struggles) with others' external appearance (confidence, ease). You see everyone else's highlight reel and your own blooper reel.",
+      "Combat it by: collecting evidence of your competence, sharing your feelings with others (you'll find you're not alone), embracing mistakes as learning, and separating your worth from your performance.",
+      "Remember: feeling like an imposter doesn't mean you are one. It often means you're pushing yourself and growing. Confidence comes through action, not feeling ready. Start before you feel ready.",
+    ],
+  },
+  {
+    id: "self-compassion-practice",
+    title: "The Power of Self-Compassion",
+    category: "Mental Health Basics",
+    readTime: "6 min read",
+    recommendedForMoods: [1, 2, 3],
+    summary: "Learn why being kind to yourself is more effective than being hard on yourself",
+    content: [
+      "Many people believe being hard on themselves is motivating. Research shows the opposite: self-criticism increases anxiety, depression, and fear of failure. Self-compassion improves resilience, motivation, and performance.",
+      "Self-compassion has three elements: self-kindness (treat yourself like a good friend), common humanity (recognize everyone struggles), and mindfulness (acknowledge pain without over-identifying with it).",
+      "When you make a mistake, notice your self-talk. Would you speak to a friend that way? If not, why speak to yourself that way? You deserve the same kindness you'd offer others.",
+      "Try this exercise: Write a letter to yourself from the perspective of a compassionate friend. What would they say about your situation? How would they encourage you? This creates distance from harsh self-judgment.",
+      "Self-compassion isn't self-indulgence or making excuses. It's acknowledging that you're human, you'll make mistakes, and that's okay. It's holding yourself accountable while remaining kind.",
+      "Research shows self-compassionate people are more likely to take responsibility for mistakes, persist after failure, and take on challenges. Kindness motivates better than criticism.",
+    ],
+  },
+  {
+    id: "healthy-boundaries",
+    title: "Setting Healthy Boundaries Without Guilt",
+    category: "Relationships",
+    readTime: "6 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Learn to protect your time, energy, and mental health by setting clear boundaries",
+    content: [
+      "Boundaries aren't walls to keep people out - they're guidelines that protect your wellbeing. They define where you end and others begin, what you're comfortable with, and what you need.",
+      "Signs you need better boundaries: feeling resentful often, saying yes when you want to say no, feeling drained by relationships, sacrificing your needs for others consistently, or feeling taken advantage of.",
+      "Setting boundaries might feel selfish if you're used to people-pleasing. But boundaries are healthy in all relationships. They prevent burnout and resentment, making relationships more sustainable.",
+      "Examples: 'I need 30 minutes to decompress before talking about your day.' 'I can't help you study tonight - I need that time for myself.' 'I don't discuss my grades with family.' 'I don't respond to messages after 9 PM.'",
+      "How to set boundaries: be clear and specific, communicate them calmly, don't over-explain or justify, prepare for pushback, and follow through consistently. Boundaries without enforcement are just suggestions.",
+      "People who respect you will respect your boundaries. Those who don't may push back, guilt you, or test limits. This shows they value their wants over your needs - important information about the relationship.",
+    ],
+  },
+  {
+    id: "nutrition-and-mood",
+    title: "How Nutrition Affects Your Mental Health",
+    category: "Healthy Habits",
+    readTime: "6 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Understand the connection between what you eat and how you feel mentally and emotionally",
+    content: [
+      "Your brain uses 20% of your daily calories despite being only 2% of your body weight. What you eat directly affects your neurotransmitters, mood, energy, and mental clarity.",
+      "Blood sugar crashes cause irritability, anxiety, and difficulty concentrating. Eating balanced meals with protein, healthy fats, and complex carbs keeps blood sugar stable and mood steady.",
+      "The gut-brain connection is real. Your gut produces 90% of your serotonin. Poor gut health can contribute to anxiety and depression. Fermented foods, fiber, and staying hydrated support gut health.",
+      "Omega-3 fatty acids (found in fish, walnuts, flaxseeds) are crucial for brain health and may help reduce anxiety and depression. B vitamins support neurotransmitter production. Vitamin D affects mood regulation.",
+      "Caffeine in moderation can help focus, but too much increases anxiety and disrupts sleep. Notice your threshold. Alcohol might feel relaxing initially but is actually a depressant that disrupts sleep quality.",
+      "For students: don't skip breakfast, keep healthy snacks available for studying, stay hydrated (dehydration affects cognition), and eat before exams. Brain fog often has simple nutritional causes.",
+    ],
+  },
+  {
+    id: "physical-exercise-mental-health",
+    title: "Exercise as Medicine for Mental Health",
+    category: "Healthy Habits",
+    readTime: "5 min read",
+    recommendedForMoods: [2, 3, 4],
+    summary: "Discover how physical movement is one of the most effective tools for mental wellness",
+    content: [
+      "Exercise is as effective as medication for mild to moderate depression and anxiety. It increases endorphins, serotonin, and dopamine - your brain's natural mood boosters. Effects can be felt after just one session.",
+      "You don't need intense workouts. A 20-minute walk has measurable mental health benefits. Any movement counts: dancing, yoga, playing with a pet, cleaning your space, or taking the stairs.",
+      "Exercise reduces stress hormones (cortisol, adrenaline), improves sleep quality, boosts self-esteem, provides healthy distraction from rumination, and increases energy levels. It's a multipurpose mental health tool.",
+      "For students sitting all day: take movement breaks every hour, walk while studying/on calls, do desk stretches, use stairs, or study in different locations to force movement between them.",
+      "The best exercise is the one you'll actually do. Don't force yourself into a gym if you hate it. Find movement you enjoy - hiking, dancing, sports, swimming, cycling, or YouTube workout videos at home.",
+      "Start small: 10 minutes daily is better than zero. Gradually increase as it becomes a habit. Exercise with friends for accountability and social connection. Track mood before and after exercise to see your own evidence.",
+    ],
+  },
+  {
+    id: "managing-perfectionism",
+    title: "Overcoming Perfectionism: Good Enough is Good Enough",
+    category: "Personal Growth",
+    readTime: "7 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Learn to distinguish between healthy striving and destructive perfectionism",
+    content: [
+      "Perfectionism isn't about high standards - it's about impossible standards. It's setting unrealistic expectations, harsh self-criticism when you don't meet them, and tying your worth to achievement. It's exhausting and unsustainable.",
+      "Perfectionism often comes from trying to avoid criticism, rejection, or shame. If I'm perfect, no one can criticize me. But perfection is impossible, so you end up in a cycle of striving, falling short, and feeling inadequate.",
+      "Signs of perfectionism: procrastination (if I can't do it perfectly, I won't start), all-or-nothing thinking (either perfect or worthless), difficulty delegating, overworking, and fear of mistakes.",
+      "Excellence vs. perfectionism: Excellence says 'I want to do this well' and celebrates good work. Perfectionism says 'This must be flawless' and never feels satisfied. One is motivating, the other is paralyzing.",
+      "Practice imperfection intentionally: submit something that's 85% instead of 100%, make a small mistake on purpose, or do something badly. This teaches your brain that mistakes aren't catastrophic.",
+      "Embrace 'good enough' for most things. Save your best effort for what truly matters. You can't give 100% to everything without burning out. Prioritize wisely and accept that B+ work is often sufficient.",
+    ],
+  },
+  {
+    id: "saying-no",
+    title: "The Art of Saying No: Protecting Your Time and Energy",
+    category: "Personal Growth",
+    readTime: "5 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Master the essential skill of declining requests without guilt or lengthy explanations",
+    content: [
+      "Every yes to someone else is a no to yourself. Your time and energy are finite resources. Saying yes to everything leads to overwhelm, resentment, and neglecting your own needs and priorities.",
+      "You don't owe anyone an elaborate explanation for saying no. 'I can't commit to that right now' is a complete sentence. Over-explaining often comes from feeling guilty, but you have the right to decline.",
+      "Ways to say no: 'Thanks for thinking of me, but I need to pass.' 'I have other commitments.' 'That doesn't work for my schedule.' 'I need to focus on my priorities right now.' 'No, but thanks for asking.'",
+      "For academic/work requests: 'I'm at capacity right now.' 'I need to protect my study time.' 'I can't take that on without sacrificing quality on my current projects.' Don't lie - be honest about your limits.",
+      "People-pleasers struggle with no because they fear disappointing others or being disliked. But people who truly care about you won't want you to overextend yourself. Respect from others starts with self-respect.",
+      "Practice saying no to small things first to build the skill. Notice that people usually accept your no and move on. The catastrophe you imagine rarely happens. Your no allows someone else to say yes.",
+    ],
+  },
+  {
+    id: "procrastination-psychology",
+    title: "Understanding and Overcoming Procrastination",
+    category: "Work & Study",
+    readTime: "6 min read",
+    recommendedForMoods: [2, 3],
+    summary: "Learn why you procrastinate and evidence-based strategies to break the cycle",
+    content: [
+      "Procrastination isn't about laziness or poor time management. It's about emotion regulation. You procrastinate when a task triggers negative emotions - anxiety, boredom, fear of failure, perfectionism - and avoiding the task temporarily relieves that discomfort.",
+      "The procrastination cycle: Task feels overwhelming → Avoid task → Temporary relief → Growing anxiety → Last-minute panic → 'I work better under pressure' (false) → Reinforces pattern.",
+      "Break the cycle with the 2-minute rule: commit to just 2 minutes of the task. Often, starting is the hardest part. Once you begin, continuing feels easier. You're not committing to finishing, just starting.",
+      "Make tasks less aversive: study with music you like, work in a coffee shop, use a timer for focused bursts, reward yourself after completing chunks, or study with a friend for accountability and company.",
+      "Address perfectionism: allow yourself to write a terrible first draft, complete an assignment to 85% instead of 100%, or do practice problems without checking answers immediately. Progress beats perfect.",
+      "Self-compassion helps. Beating yourself up about procrastinating makes you feel worse, which increases avoidance. Acknowledge the difficulty, be kind to yourself, and take the next small step forward.",
+    ],
+  },
+  {
+    id: "positive-psychology",
+    title: "Positive Psychology: Building What's Right",
+    category: "Mental Health Basics",
+    readTime: "6 min read",
+    recommendedForMoods: [3, 4, 5],
+    summary: "Learn how to cultivate wellbeing by building strengths rather than just fixing problems",
+    content: [
+      "Traditional psychology focuses on fixing what's wrong. Positive psychology asks: What makes life worth living? It's about building resilience, meaning, positive emotions, engagement, and healthy relationships.",
+      "The PERMA model of wellbeing: Positive emotions (joy, gratitude, hope), Engagement (flow, being absorbed in activities), Relationships (meaningful connections), Meaning (purpose larger than yourself), Achievement (accomplishment, growth).",
+      "Savoring practice: intentionally prolong positive experiences. When something good happens, pause and fully experience it. Share it with others. Recall it later. This amplifies positive emotions and builds optimism.",
+      "Identify your character strengths (curiosity, kindness, perseverance, creativity, etc.) and use them more. Research shows that using your strengths daily increases happiness and decreases depression for months afterward.",
+      "Three good things exercise: Each night, write three things that went well today and why they happened. This simple practice rewires your brain to notice positive events and increases life satisfaction over time.",
+      "Positive psychology isn't toxic positivity or ignoring problems. It's acknowledging difficulties while also building resources and strengths that help you cope with and grow through challenges.",
+    ],
+  },
+]
+
+export const CATEGORIES = ["All", ...Array.from(new Set(LEARNING_ARTICLES.map((article) => article.category)))]
+
+export function getRecommendedArticles(recentMoodAverage: number): Article[] {
+  return LEARNING_ARTICLES.filter((article) => article.recommendedForMoods.includes(Math.round(recentMoodAverage)))
+}
+
+export function getArticlesByCategory(category: string): Article[] {
+  if (category === "All") return LEARNING_ARTICLES
+  return LEARNING_ARTICLES.filter((article) => article.category === category)
+}
