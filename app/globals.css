@@ -4,108 +4,110 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =====================================================
-   ROOT THEME – LIGHT MODE (Enterprise SaaS Premium)
-   Minimal, trust-building, investor-ready aesthetic
+   ROOT THEME – LIGHT MODE (Emotional Intelligence Analytics)
+   Premium SaaS with soft gradients - blue, indigo, teal
 ===================================================== */
 :root {
-  /* Base - Minimalist light palette for maximum clarity */
-  --background: 255 255 255; /* Pure white - premium & clean */
-  --foreground: 17 24 39; /* Near-black gray-900 - excellent readability */
+  /* Base - Clean, minimal light palette for EI platform */
+  --background: 248 250 252; /* Soft off-white with blue undertone */
+  --foreground: 17 24 39; /* Dark gray for excellent readability */
 
-  --card: 249 250 251; /* Gray-50 - subtle elevation */
+  --card: 255 255 255; /* Pure white cards - premium elevation */
   --card-foreground: 17 24 39;
 
   --popover: 255 255 255;
   --popover-foreground: 17 24 39;
 
-  /* Brand - Professional blue for trust & clarity */
-  --primary: 37 99 235; /* Blue-600 - professional, trustworthy */
+  /* Brand - Primary blue (calm intelligence) */
+  --primary: 59 130 246; /* Blue-500 - main brand color */
   --primary-foreground: 255 255 255;
 
-  --secondary: 59 130 246; /* Blue-500 - lighter accent */
+  /* Secondary - Indigo (depth & analytics) */
+  --secondary: 99 102 241; /* Indigo-500 - emotional insights */
   --secondary-foreground: 255 255 255;
 
-  --accent: 107 114 128; /* Gray-500 - refined neutral */
+  /* Accent - Teal (growth & wellness) */
+  --accent: 20 184 166; /* Teal-500 - positive growth */
   --accent-foreground: 255 255 255;
 
   /* Utility */
-  --muted: 243 244 246; /* Gray-100 - subtle backgrounds */
-  --muted-foreground: 107 114 128; /* Gray-500 */
+  --muted: 241 245 249; /* Slate-100 - subtle backgrounds */
+  --muted-foreground: 100 116 139; /* Slate-500 */
 
   --destructive: 220 38 38; /* Red-600 for errors */
   --destructive-foreground: 255 255 255;
 
-  --border: 229 231 235; /* Gray-200 - clean borders */
-  --input: 243 244 246; /* Gray-100 */
-  --ring: 37 99 235; /* Blue-600 */
+  --border: 226 232 240; /* Slate-200 - clean borders */
+  --input: 241 245 249; /* Slate-100 */
+  --ring: 59 130 246; /* Blue-500 */
 
-  /* Charts - Professional palette */
-  --chart-1: 37 99 235; /* Blue-600 */
-  --chart-2: 59 130 246; /* Blue-500 */
-  --chart-3: 99 102 241; /* Indigo-500 */
-  --chart-4: 139 92 246; /* Purple-500 */
-  --chart-5: 34 197 94; /* Green-500 */
+  /* Charts - Emotional Intelligence palette */
+  --chart-1: 59 130 246; /* Blue - stability */
+  --chart-2: 99 102 241; /* Indigo - growth */
+  --chart-3: 20 184 166; /* Teal - wellness */
+  --chart-4: 34 197 94; /* Green - progress */
+  --chart-5: 249 115 22; /* Orange - energy */
 
-  /* Radius */
-  --radius: 0.5rem;
+  /* Radius - Modern rounded corners */
+  --radius: 0.75rem;
 
   /* Sidebar */
   --sidebar: 255 255 255;
   --sidebar-foreground: 17 24 39;
-  --sidebar-primary: 37 99 235;
+  --sidebar-primary: 59 130 246;
   --sidebar-primary-foreground: 255 255 255;
-  --sidebar-accent: 243 244 246;
+  --sidebar-accent: 241 245 249;
   --sidebar-accent-foreground: 17 24 39;
-  --sidebar-border: 229 231 235;
-  --sidebar-ring: 37 99 235;
+  --sidebar-border: 226 232 240;
+  --sidebar-ring: 59 130 246;
 }
 
 /* =====================================================
-   DARK MODE (Enterprise SaaS Dark Theme)
+   DARK MODE (Premium EI Analytics - Dark Theme)
 ===================================================== */
 .dark {
-  /* Dark mode with clean gray and blue palette */
-  --background: 17 24 39; /* Gray-900 - deep, professional */
-  --foreground: 249 250 251; /* Gray-50 - high contrast text */
+  /* Deep professional dark with blue/indigo tones */
+  --background: 15 23 42; /* Slate-950 - deep, calm background */
+  --foreground: 241 245 249; /* Slate-100 - high contrast text */
 
-  --card: 31 41 55; /* Gray-800 - elevated surface */
-  --card-foreground: 249 250 251;
+  --card: 30 41 59; /* Slate-800 - elevated surface */
+  --card-foreground: 241 245 249;
 
-  --popover: 31 41 55;
-  --popover-foreground: 249 250 251;
+  --popover: 30 41 59;
+  --popover-foreground: 241 245 249;
 
-  --primary: 96 165 250; /* Blue-400 - bright, professional */
-  --primary-foreground: 17 24 39;
+  --primary: 96 165 250; /* Blue-400 - bright, calm */
+  --primary-foreground: 15 23 42;
 
-  --secondary: 59 130 246; /* Blue-500 - secondary accent */
-  --secondary-foreground: 17 24 39;
+  --secondary: 129 140 248; /* Indigo-400 - secondary accent */
+  --secondary-foreground: 15 23 42;
 
-  --accent: 156 163 175; /* Gray-400 - refined neutral */
-  --accent-foreground: 17 24 39;
+  --accent: 45 212 191; /* Teal-400 - wellness accent */
+  --accent-foreground: 15 23 42;
 
-  --muted: 31 41 55; /* Gray-800 */
-  --muted-foreground: 156 163 175; /* Gray-400 */
+  --muted: 30 41 59; /* Slate-800 */
+  --muted-foreground: 148 163 184; /* Slate-400 */
 
   --destructive: 248 113 113; /* Red-400 */
-  --destructive-foreground: 17 24 39;
+  --destructive-foreground: 15 23 42;
 
-  --border: 55 65 81; /* Gray-700 - clean borders */
-  --input: 31 41 55; /* Gray-800 */
+  --border: 51 65 85; /* Slate-700 - clean borders */
+  --input: 30 41 59; /* Slate-800 */
   --ring: 96 165 250; /* Blue-400 */
 
   --chart-1: 96 165 250; /* Blue-400 */
-  --chart-2: 59 130 246; /* Blue-500 */
-  --chart-3: 99 102 241; /* Indigo-500 */
-  --chart-4: 139 92 246; /* Purple-500 */
-  --chart-5: 34 197 94; /* Green-500 */
+  --chart-2: 129 140 248; /* Indigo-400 */
+  --chart-3: 45 212 191; /* Teal-400 */
+  --chart-4: 34 197 94; /* Green-500 */
+  --chart-5: 249 115 22; /* Orange-500 */
 
-  --sidebar: 17 24 39; /* Gray-900 */
-  --sidebar-foreground: 249 250 251;
+  --sidebar: 15 23 42; /* Slate-950 */
+  --sidebar-foreground: 241 245 249;
   --sidebar-primary: 96 165 250;
-  --sidebar-primary-foreground: 17 24 39;
-  --sidebar-accent: 31 41 55;
-  --sidebar-accent-foreground: 249 250 251;
-  --sidebar-border: 55 65 81;
+  --sidebar-primary-foreground: 15 23 42;
+  --sidebar-accent: 30 41 59;
+  --sidebar-accent-foreground: 241 245 249;
+  --sidebar-border: 51 65 85;
   --sidebar-ring: 96 165 250;
 }
 
