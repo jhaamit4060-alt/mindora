@@ -44,36 +44,38 @@ export default async function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-background dark:bg-background">
-      <div className="w-full px-4 md:px-6 lg:px-12 xl:px-16 py-8 md:py-12 space-y-8">
+      <div className="w-full px-4 md:px-6 lg:px-12 xl:px-16 py-8 md:py-12 space-y-10">
         {/* ================= GREETING ================= */}
-        <div className="space-y-2">
-          <h1 className="text-3xl md:text-4xl font-bold">Welcome back, {userData?.name}</h1>
-          <p className="text-muted-foreground">
+        <div className="space-y-3">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Welcome back, {userData?.name}</h1>
+          <p className="text-lg text-muted-foreground font-light">
             {hasLoggedMoodToday
-              ? "You've logged your mood today. Great work maintaining your routine."
-              : "Take a moment to check in with yourself and log your mood today."}
+              ? "You've logged your mood today. Excellent work maintaining your routine."
+              : "Take a moment to check in with yourself and track your emotional state."}
           </p>
         </div>
 
         {/* ================= EMOTIONAL GROWTH SCORE ================= */}
-        <div className="bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 border border-primary/20 rounded-2xl p-8 md:p-10">
-          <div className="flex items-start justify-between gap-6">
-            <div className="space-y-4 flex-1">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-secondary" />
-                <span className="text-sm font-semibold text-secondary">Emotional Growth Score</span>
+        <div className="bg-gradient-to-br from-primary/12 via-secondary/6 to-accent/8 border border-primary/25 rounded-2xl p-10 md:p-12 shadow-premium-lg card-hover">
+          <div className="flex items-start justify-between gap-8">
+            <div className="space-y-6 flex-1">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-secondary/20 text-secondary">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <span className="text-sm font-semibold text-secondary tracking-wide">Emotional Growth Score</span>
               </div>
-              <div className="space-y-2">
-                <div className="text-5xl font-bold">{emotionalGrowthScore}</div>
-                <p className="text-muted-foreground">
-                  Your emotional stability and growth have improved this week.
+              <div className="space-y-3">
+                <div className="text-6xl font-bold tracking-tight">{emotionalGrowthScore}</div>
+                <p className="text-muted-foreground text-lg font-light">
+                  Your emotional resilience and stability have improved significantly this week.
                 </p>
               </div>
             </div>
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0">
+            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 flex items-center justify-center flex-shrink-0 shadow-premium-md">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{emotionalGrowthScore}</div>
-                <div className="text-xs text-muted-foreground mt-1">of 100</div>
+                <div className="text-4xl font-bold text-primary">{emotionalGrowthScore}</div>
+                <div className="text-sm text-muted-foreground mt-2 font-medium">out of 100</div>
               </div>
             </div>
           </div>
@@ -91,21 +93,21 @@ export default async function DashboardPage() {
           <AnalyticsStatCard
             title="Consistency Index"
             value={`${recentMoods.length} days`}
-            subtitle="Logged consecutively"
+            subtitle="Tracked consecutively"
             icon={<BarChart3 className="w-5 h-5" />}
             trend="stable"
           />
           <AnalyticsStatCard
             title="Burnout Risk"
             value="Moderate"
-            subtitle="Recommend recovery time"
+            subtitle="Recovery time recommended"
             icon={<Zap className="w-5 h-5" />}
             trend="down"
           />
           <AnalyticsStatCard
             title="Growth Tracking"
             value={`+${Math.round(emotionalGrowthScore / 20)}%`}
-            subtitle="Compared to last month"
+            subtitle="vs last month"
             icon={<CheckCircle2 className="w-5 h-5" />}
             trend="up"
           />
@@ -227,16 +229,18 @@ function AnalyticsStatCard({
     trend === "up" ? "text-accent" : trend === "down" ? "text-orange-500" : "text-muted-foreground"
 
   return (
-    <Card className="border-border/50">
-      <CardHeader className="pb-3">
+    <Card className="border-border/50 shadow-premium-sm hover:shadow-premium-md card-hover bg-card/50 backdrop-blur-sm">
+      <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-sm font-medium text-muted-foreground">{title}</CardTitle>
-          <div className={`${trendColor}`}>{icon}</div>
+          <CardTitle className="text-sm font-semibold text-muted-foreground tracking-wide">{title}</CardTitle>
+          <div className={`p-2 rounded-lg bg-${trendColor === "text-accent" ? "accent" : "orange"}/10 ${trendColor}`}>
+            {icon}
+          </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-2">
-        <div className="text-3xl font-bold">{value}</div>
-        <p className="text-xs text-muted-foreground">{subtitle}</p>
+      <CardContent className="space-y-3">
+        <div className="text-3xl font-bold tracking-tight">{value}</div>
+        <p className="text-sm text-muted-foreground font-medium">{subtitle}</p>
       </CardContent>
     </Card>
   )
@@ -256,17 +260,17 @@ function QuickActionCard({
   return (
     <Link
       href={href}
-      className="group p-6 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all"
+      className="group p-8 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-primary/5 shadow-premium-sm hover:shadow-premium-md transition-all duration-300 card-hover"
     >
-      <div className="space-y-4">
-        <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+      <div className="space-y-5">
+        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 text-primary flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
           {icon}
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold group-hover:text-primary transition-colors">{title}</h3>
-          <p className="text-sm text-muted-foreground">{desc}</p>
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors duration-300">{title}</h3>
+          <p className="text-sm text-muted-foreground font-medium">{desc}</p>
         </div>
-        <div className="flex items-center gap-2 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="flex items-center gap-2 text-sm text-primary font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
           Get started <ArrowRight className="w-4 h-4" />
         </div>
       </div>

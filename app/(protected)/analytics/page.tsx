@@ -40,43 +40,43 @@ export default async function UserAnalyticsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="w-full px-4 md:px-6 lg:px-12 xl:px-16 py-8 md:py-12 space-y-8">
+      <div className="w-full px-4 md:px-6 lg:px-12 xl:px-16 py-8 md:py-12 space-y-10">
         {/* Page Header */}
-        <div className="space-y-2">
-          <h1 className="text-3xl md:text-4xl font-bold">AI Insights & Analytics</h1>
-          <p className="text-muted-foreground">
-            Discover patterns in your emotional data with machine learning analysis
+        <div className="space-y-3">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Advanced AI Analytics</h1>
+          <p className="text-lg text-muted-foreground font-light">
+            Discover hidden patterns in your emotional data with advanced machine learning analysis
           </p>
         </div>
 
         {/* Weekly Emotional Summary */}
         <div className="grid md:grid-cols-2 gap-6">
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-transparent to-secondary/5">
+          <Card className="border-primary/20 bg-gradient-to-br from-primary/12 via-transparent to-secondary/6 shadow-premium-md hover:shadow-premium-lg card-hover">
             <CardHeader>
-              <div className="flex items-center gap-2">
-                <div className="p-2 rounded-lg bg-primary/20 text-primary">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-primary/25 to-primary/10 text-primary">
                   <BarChart3 className="w-5 h-5" />
                 </div>
-                <CardTitle>Weekly Emotional Summary</CardTitle>
+                <CardTitle className="text-xl">Weekly Emotional Summary</CardTitle>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Average Mood</p>
-                  <p className="text-3xl font-bold text-primary">{avgMood}/10</p>
+            <CardContent className="space-y-8">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <p className="text-sm font-medium text-muted-foreground tracking-wide">Average Mood</p>
+                  <p className="text-4xl font-bold text-primary tracking-tight">{avgMood}/10</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Entries This Month</p>
-                  <p className="text-3xl font-bold text-secondary">{allMoods.length}</p>
+                <div className="space-y-3">
+                  <p className="text-sm font-medium text-muted-foreground tracking-wide">Monthly Entries</p>
+                  <p className="text-4xl font-bold text-secondary tracking-tight">{allMoods.length}</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Highest Mood</p>
-                  <p className="text-3xl font-bold text-accent">{highestMood}/10</p>
+                <div className="space-y-3">
+                  <p className="text-sm font-medium text-muted-foreground tracking-wide">Peak Mood</p>
+                  <p className="text-4xl font-bold text-accent tracking-tight">{highestMood}/10</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Emotional Stability</p>
-                  <p className="text-3xl font-bold text-orange-500">{10 - moodVariance}/10</p>
+                <div className="space-y-3">
+                  <p className="text-sm font-medium text-muted-foreground tracking-wide">Stability Score</p>
+                  <p className="text-4xl font-bold text-orange-500 tracking-tight">{10 - moodVariance}/10</p>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground border-t border-border/50 pt-4">
@@ -85,28 +85,28 @@ export default async function UserAnalyticsPage() {
             </CardContent>
           </Card>
 
-          <Card className="border-secondary/20 bg-gradient-to-br from-secondary/10 via-transparent to-accent/5">
+          <Card className="border-secondary/20 bg-gradient-to-br from-secondary/12 via-transparent to-accent/6 shadow-premium-md hover:shadow-premium-lg card-hover">
             <CardHeader>
-              <div className="flex items-center gap-2">
-                <div className="p-2 rounded-lg bg-secondary/20 text-secondary">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-secondary/25 to-secondary/10 text-secondary">
                   <Calendar className="w-5 h-5" />
                 </div>
-                <CardTitle>Monthly Growth Summary</CardTitle>
+                <CardTitle className="text-xl">Monthly Growth Summary</CardTitle>
               </div>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8">
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 bg-accent/10 rounded-lg border border-accent/20">
-                  <span className="text-sm font-medium">Mood Consistency</span>
-                  <span className="text-lg font-bold text-accent">+32%</span>
+                <div className="flex items-center justify-between p-4 bg-accent/12 rounded-lg border border-accent/25 shadow-premium-sm card-hover">
+                  <span className="text-sm font-semibold text-foreground">Mood Consistency</span>
+                  <span className="text-2xl font-bold text-accent tracking-tight">+32%</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-primary/10 rounded-lg border border-primary/20">
-                  <span className="text-sm font-medium">Emotional Resilience</span>
-                  <span className="text-lg font-bold text-primary">+18%</span>
+                <div className="flex items-center justify-between p-4 bg-primary/12 rounded-lg border border-primary/25 shadow-premium-sm card-hover">
+                  <span className="text-sm font-semibold text-foreground">Emotional Resilience</span>
+                  <span className="text-2xl font-bold text-primary tracking-tight">+18%</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-secondary/10 rounded-lg border border-secondary/20">
-                  <span className="text-sm font-medium">Self-Awareness</span>
-                  <span className="text-lg font-bold text-secondary">+27%</span>
+                <div className="flex items-center justify-between p-4 bg-secondary/12 rounded-lg border border-secondary/25 shadow-premium-sm card-hover">
+                  <span className="text-sm font-semibold text-foreground">Self-Awareness</span>
+                  <span className="text-2xl font-bold text-secondary tracking-tight">+27%</span>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground border-t border-border/50 pt-4">

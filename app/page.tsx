@@ -17,100 +17,112 @@ import {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background dark:bg-background text-foreground overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative pt-20 pb-24 md:pt-32 md:pb-40">
+      {/* Premium Hero Section */}
+      <section className="relative pt-24 pb-28 md:pt-40 md:pb-48">
         <div className="absolute inset-0 overflow-hidden -z-10">
-          <div className="absolute top-40 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-32 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-32 right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 left-1/3 w-96 h-96 bg-secondary/8 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 flex flex-col items-center text-center space-y-8">
-          <div className="space-y-6 max-w-4xl">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tight text-balance leading-tight">
-              Emotional Intelligence,{" "}
+        <div className="container mx-auto px-4 flex flex-col items-center text-center space-y-10">
+          <div className="space-y-8 max-w-5xl stagger-child">
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary w-fit mx-auto">
+              <Sparkles className="w-4 h-4" />
+              <span>Emotional Intelligence Analytics</span>
+            </div>
+            
+            <h1 className="text-7xl md:text-8xl font-bold tracking-tight text-balance leading-tight">
+              Understand Your{" "}
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Amplified
+                Emotional Self
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Analytics-driven emotional growth. Track your patterns, understand your triggers, and unlock clarity with AI-powered insights.
+            
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
+              Advanced analytics for emotional growth. Track patterns, identify triggers, and unlock clarity with AI-powered insights.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button asChild size="lg" className="h-12 px-8 text-base font-semibold">
-              <Link href="/signup" className="flex items-center gap-2">
-                Start Tracking <ArrowRight className="w-4 h-4" />
+          <div className="flex flex-col sm:flex-row gap-4 pt-2 stagger-child">
+            <Button asChild size="lg" className="h-14 px-10 text-base font-semibold shadow-premium-lg hover:shadow-premium-xl card-hover">
+              <Link href="/signup" className="flex items-center gap-3">
+                Start Free <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base font-semibold">
-              <Link href="#analytics-demo">View Analytics Demo</Link>
+            <Button asChild variant="outline" size="lg" className="h-14 px-10 text-base font-semibold border-border/50 card-hover">
+              <Link href="#analytics-demo" className="flex items-center gap-2">
+                View Demo <BarChart3 className="w-5 h-5" />
+              </Link>
             </Button>
           </div>
 
-          <p className="text-sm text-muted-foreground pt-6">
-            Free to start • No credit card required • Privacy first
+          <p className="text-sm text-muted-foreground/80 pt-8 stagger-child">
+            <span className="font-medium">Free to start</span> • No credit card required • Privacy first
           </p>
         </div>
       </section>
 
       {/* Emotional Intelligence Analytics Section */}
-      <section className="py-20 md:py-32 border-t border-border">
+      <section className="py-24 md:py-40 border-t border-border/50 bg-gradient-to-b from-transparent via-primary/2 to-transparent">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance">
-              Your Emotional Intelligence Dashboard
+          <div className="text-center mb-20 space-y-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
+              Enterprise-Grade Analytics
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Professional-grade analytics designed to help you understand your emotional patterns
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
+              Professional insights designed to help you master your emotional patterns and unlock personal growth
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 stagger-child">
             <AnalyticsCard
-              icon={<TrendingUp className="w-6 h-6" />}
+              icon={<TrendingUp className="w-7 h-7" />}
               title="Emotional Volatility Score"
-              desc="Measure emotional stability over time and identify your peak stress periods"
+              desc="Measure emotional stability over time and identify your peak stress periods with precision"
             />
             <AnalyticsCard
-              icon={<BarChart3 className="w-6 h-6" />}
+              icon={<BarChart3 className="w-7 h-7" />}
               title="Burnout Risk Indicator"
-              desc="Real-time assessment of your stress levels with low, moderate, or high ratings"
+              desc="Real-time assessment of your stress levels with predictive alerts and recommendations"
             />
             <AnalyticsCard
-              icon={<Sparkles className="w-6 h-6" />}
+              icon={<Sparkles className="w-7 h-7" />}
               title="Growth Tracking"
-              desc="Monitor your emotional growth milestones and celebrate progress over weeks"
+              desc="Monitor emotional growth milestones and celebrate progress with detailed metrics"
             />
           </div>
         </div>
       </section>
 
       {/* AI Insights Section */}
-      <section className="py-20 md:py-32 bg-muted/40">
+      <section className="py-24 md:py-40 bg-gradient-to-b from-primary/3 via-transparent to-secondary/2">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-                  AI-Powered Insights
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 stagger-child">
+              <div className="space-y-4">
+                <h2 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
+                  AI-Powered Emotional Intelligence
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Get personalized emotional insights powered by advanced analytics. Discover patterns you didn't know existed.
+                <p className="text-xl text-muted-foreground leading-relaxed font-light">
+                  Advanced machine learning discovers hidden patterns in your emotional data, delivering actionable insights you can trust.
                 </p>
               </div>
 
-              <ul className="space-y-4">
-                <InsightItem text="Weekly emotional summary cards" />
-                <InsightItem text="Predictive mood trend alerts" />
-                <InsightItem text="Smart trigger identification" />
-                <InsightItem text="Personalized wellness suggestions" />
+              <ul className="space-y-4 pt-4">
+                <InsightItem text="Smart weekly emotional summaries" />
+                <InsightItem text="Predictive mood trend forecasting" />
+                <InsightItem text="Intelligent trigger identification" />
+                <InsightItem text="Personalized wellness recommendations" />
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-2xl p-8 border border-border/50">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
-                <BarChart3 className="w-24 h-24 text-primary/40" />
+            <div className="relative stagger-child">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-secondary/10 to-accent/20 rounded-2xl blur-2xl"></div>
+              <div className="relative bg-gradient-to-br from-primary/15 via-secondary/8 to-accent/12 rounded-2xl p-10 border border-border/50 card-hover shadow-premium-lg">
+                <div className="aspect-square bg-gradient-to-br from-primary/25 to-secondary/15 rounded-xl flex items-center justify-center">
+                  <BarChart3 className="w-32 h-32 text-primary/30" />
+                </div>
               </div>
             </div>
           </div>
@@ -118,56 +130,64 @@ export default function HomePage() {
       </section>
 
       {/* Privacy & Security Section */}
-      <section className="py-20 md:py-32 border-t border-border">
+      <section className="py-24 md:py-40 border-t border-border/50 bg-gradient-to-b from-transparent via-accent/2 to-transparent">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-accent/10 via-primary/5 to-secondary/10 rounded-2xl p-8 border border-border/50 order-2 md:order-1">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg flex items-center justify-center">
-                <Shield className="w-24 h-24 text-accent/40" />
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative stagger-child order-2 md:order-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/10 to-secondary/15 rounded-2xl blur-2xl"></div>
+              <div className="relative bg-gradient-to-br from-accent/15 via-primary/8 to-secondary/12 rounded-2xl p-10 border border-border/50 card-hover shadow-premium-lg">
+                <div className="aspect-square bg-gradient-to-br from-accent/25 to-primary/15 rounded-xl flex items-center justify-center">
+                  <Shield className="w-32 h-32 text-accent/30" />
+                </div>
               </div>
             </div>
 
-            <div className="space-y-8 order-1 md:order-2">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Privacy & Security First
+            <div className="space-y-8 stagger-child order-1 md:order-2">
+              <div className="space-y-4">
+                <h2 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
+                  Privacy & Security, Always
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Your emotional data is deeply personal. We encrypt everything end-to-end and never share your insights with third parties.
+                <p className="text-xl text-muted-foreground leading-relaxed font-light">
+                  Your emotional data is sacred. Enterprise-grade encryption protects every insight, and we never share your information with third parties.
                 </p>
               </div>
 
-              <ul className="space-y-4">
-                <InsightItem text="End-to-end encryption" />
-                <InsightItem text="Zero third-party sharing" />
-                <InsightItem text="GDPR compliant" />
-                <InsightItem text="Download your data anytime" />
+              <ul className="space-y-4 pt-4">
+                <InsightItem text="End-to-end encryption standard" />
+                <InsightItem text="Zero third-party data sharing" />
+                <InsightItem text="GDPR & privacy compliant" />
+                <InsightItem text="Download or delete data anytime" />
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border-t border-border">
-        <div className="container mx-auto px-4 text-center space-y-8">
-          <div className="space-y-4 max-w-2xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance">
-              Start Your Emotional Intelligence Journey
+      {/* Premium CTA Section */}
+      <section className="py-28 md:py-44 bg-gradient-to-br from-primary/8 via-secondary/5 to-accent/6 border-t border-border/50 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 text-center space-y-10">
+          <div className="space-y-6 max-w-3xl mx-auto stagger-child">
+            <h2 className="text-6xl md:text-7xl font-bold text-balance leading-tight">
+              Begin Your Transformation
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Join thousands of people gaining clarity on their emotions and building resilience.
+            <p className="text-2xl text-muted-foreground font-light">
+              Join thousands of people gaining clarity on their emotions and building lasting resilience.
             </p>
           </div>
 
-          <Button asChild size="lg" className="h-12 px-8 text-base font-semibold">
-            <Link href="/signup" className="flex items-center gap-2 mx-auto w-fit">
-              Get Started Free <ArrowRight className="w-4 h-4" />
+          <Button asChild size="lg" className="h-14 px-12 text-base font-semibold shadow-premium-lg hover:shadow-premium-xl card-hover stagger-child">
+            <Link href="/signup" className="flex items-center gap-3 mx-auto w-fit">
+              Get Started Free <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
 
-          <p className="text-sm text-muted-foreground pt-4">
-            Mindora is a self-care tool, not medical advice. Always consult healthcare professionals for mental health concerns.
+          <p className="text-sm text-muted-foreground/70 pt-8 max-w-2xl mx-auto stagger-child">
+            Mindora is a self-care platform, not medical advice. Always consult healthcare professionals for clinical mental health concerns.
           </p>
         </div>
       </section>
@@ -179,21 +199,21 @@ export default function HomePage() {
 
 function AnalyticsCard({ icon, title, desc }: any) {
   return (
-    <div className="group p-8 rounded-xl border border-border/50 bg-card hover:border-primary/50 hover:bg-primary/5 transition-all">
-      <div className="p-3 w-fit mb-4 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+    <div className="group p-8 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 hover:bg-card shadow-premium-sm hover:shadow-premium-md transition-all duration-300 card-hover">
+      <div className="p-3 w-fit mb-5 rounded-lg bg-gradient-to-br from-primary/15 to-primary/5 text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed">{desc}</p>
+      <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed text-sm">{desc}</p>
     </div>
   )
 }
 
 function InsightItem({ text }: { text: string }) {
   return (
-    <div className="flex items-start gap-3">
-      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-      <span className="text-muted-foreground">{text}</span>
+    <div className="flex items-start gap-4 group">
+      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
+      <span className="text-muted-foreground font-medium group-hover:text-foreground transition-colors duration-300">{text}</span>
     </div>
   )
 }

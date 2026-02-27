@@ -4,111 +4,111 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =====================================================
-   ROOT THEME – LIGHT MODE (Emotional Intelligence Analytics)
-   Premium SaaS with soft gradients - blue, indigo, teal
+   ROOT THEME – LIGHT MODE ($50M SaaS: Emotional Intelligence Analytics)
+   Enterprise-grade design with premium refinement
 ===================================================== */
 :root {
-  /* Base - Clean, minimal light palette for EI platform */
-  --background: 248 250 252; /* Soft off-white with blue undertone */
-  --foreground: 17 24 39; /* Dark gray for excellent readability */
+  /* Base - Sophisticated minimal palette */
+  --background: 250 251 252; /* Ultra-soft blue-tinted white */
+  --foreground: 15 23 42; /* Deep slate for premium contrast */
 
-  --card: 255 255 255; /* Pure white cards - premium elevation */
-  --card-foreground: 17 24 39;
+  --card: 255 255 255; /* Pure white cards with subtle elevation */
+  --card-foreground: 15 23 42;
 
   --popover: 255 255 255;
-  --popover-foreground: 17 24 39;
+  --popover-foreground: 15 23 42;
 
-  /* Brand - Primary blue (calm intelligence) */
-  --primary: 59 130 246; /* Blue-500 - main brand color */
+  /* Brand - Professional blue with depth */
+  --primary: 37 99 235; /* Blue-600 - premium, trustworthy */
   --primary-foreground: 255 255 255;
 
-  /* Secondary - Indigo (depth & analytics) */
-  --secondary: 99 102 241; /* Indigo-500 - emotional insights */
+  /* Secondary - Sophisticated indigo */
+  --secondary: 88 80 235; /* Indigo-600 - emotional depth */
   --secondary-foreground: 255 255 255;
 
-  /* Accent - Teal (growth & wellness) */
-  --accent: 20 184 166; /* Teal-500 - positive growth */
+  /* Accent - Premium teal */
+  --accent: 16 185 129; /* Emerald-500 - growth & wellness */
   --accent-foreground: 255 255 255;
 
-  /* Utility */
-  --muted: 241 245 249; /* Slate-100 - subtle backgrounds */
-  --muted-foreground: 100 116 139; /* Slate-500 */
+  /* Utility - Refined neutrals */
+  --muted: 243 244 246; /* Gray-100 - subtle, refined */
+  --muted-foreground: 107 114 128; /* Gray-500 */
 
   --destructive: 220 38 38; /* Red-600 for errors */
   --destructive-foreground: 255 255 255;
 
-  --border: 226 232 240; /* Slate-200 - clean borders */
-  --input: 241 245 249; /* Slate-100 */
-  --ring: 59 130 246; /* Blue-500 */
+  --border: 229 231 235; /* Gray-200 - premium borders */
+  --input: 243 244 246; /* Gray-100 */
+  --ring: 37 99 235; /* Blue-600 */
 
-  /* Charts - Emotional Intelligence palette */
-  --chart-1: 59 130 246; /* Blue - stability */
-  --chart-2: 99 102 241; /* Indigo - growth */
-  --chart-3: 20 184 166; /* Teal - wellness */
+  /* Charts - Professional analytics palette */
+  --chart-1: 37 99 235; /* Blue - stability */
+  --chart-2: 88 80 235; /* Indigo - growth */
+  --chart-3: 16 185 129; /* Emerald - wellness */
   --chart-4: 34 197 94; /* Green - progress */
   --chart-5: 249 115 22; /* Orange - energy */
 
-  /* Radius - Modern rounded corners */
-  --radius: 0.75rem;
+  /* Radius - Refined corners */
+  --radius: 0.625rem;
 
   /* Sidebar */
   --sidebar: 255 255 255;
-  --sidebar-foreground: 17 24 39;
-  --sidebar-primary: 59 130 246;
+  --sidebar-foreground: 15 23 42;
+  --sidebar-primary: 37 99 235;
   --sidebar-primary-foreground: 255 255 255;
-  --sidebar-accent: 241 245 249;
-  --sidebar-accent-foreground: 17 24 39;
-  --sidebar-border: 226 232 240;
-  --sidebar-ring: 59 130 246;
+  --sidebar-accent: 243 244 246;
+  --sidebar-accent-foreground: 15 23 42;
+  --sidebar-border: 229 231 235;
+  --sidebar-ring: 37 99 235;
 }
 
 /* =====================================================
-   DARK MODE (Premium EI Analytics - Dark Theme)
+   DARK MODE ($50M SaaS - Dark Theme)
 ===================================================== */
 .dark {
-  /* Deep professional dark with blue/indigo tones */
-  --background: 15 23 42; /* Slate-950 - deep, calm background */
-  --foreground: 241 245 249; /* Slate-100 - high contrast text */
+  /* Premium deep dark with sophisticated tone */
+  --background: 17 24 39; /* Slate-900 - refined dark background */
+  --foreground: 248 250 251; /* Slate-50 - premium white contrast */
 
-  --card: 30 41 59; /* Slate-800 - elevated surface */
-  --card-foreground: 241 245 249;
+  --card: 30 41 55; /* Slate-800 - elevated premium surface */
+  --card-foreground: 248 250 251;
 
-  --popover: 30 41 59;
-  --popover-foreground: 241 245 249;
+  --popover: 30 41 55;
+  --popover-foreground: 248 250 251;
 
-  --primary: 96 165 250; /* Blue-400 - bright, calm */
-  --primary-foreground: 15 23 42;
+  --primary: 59 130 246; /* Blue-500 - bright, premium */
+  --primary-foreground: 17 24 39;
 
-  --secondary: 129 140 248; /* Indigo-400 - secondary accent */
-  --secondary-foreground: 15 23 42;
+  --secondary: 129 140 248; /* Indigo-400 - sophisticated accent */
+  --secondary-foreground: 17 24 39;
 
-  --accent: 45 212 191; /* Teal-400 - wellness accent */
-  --accent-foreground: 15 23 42;
+  --accent: 52 211 153; /* Emerald-400 - growth accent */
+  --accent-foreground: 17 24 39;
 
-  --muted: 30 41 59; /* Slate-800 */
-  --muted-foreground: 148 163 184; /* Slate-400 */
+  --muted: 30 41 55; /* Slate-800 */
+  --muted-foreground: 156 163 175; /* Gray-400 */
 
   --destructive: 248 113 113; /* Red-400 */
-  --destructive-foreground: 15 23 42;
+  --destructive-foreground: 17 24 39;
 
-  --border: 51 65 85; /* Slate-700 - clean borders */
-  --input: 30 41 59; /* Slate-800 */
-  --ring: 96 165 250; /* Blue-400 */
+  --border: 55 65 81; /* Gray-700 - premium borders */
+  --input: 30 41 55; /* Slate-800 */
+  --ring: 59 130 246; /* Blue-500 */
 
-  --chart-1: 96 165 250; /* Blue-400 */
+  --chart-1: 59 130 246; /* Blue-500 */
   --chart-2: 129 140 248; /* Indigo-400 */
-  --chart-3: 45 212 191; /* Teal-400 */
+  --chart-3: 52 211 153; /* Emerald-400 */
   --chart-4: 34 197 94; /* Green-500 */
   --chart-5: 249 115 22; /* Orange-500 */
 
-  --sidebar: 15 23 42; /* Slate-950 */
-  --sidebar-foreground: 241 245 249;
-  --sidebar-primary: 96 165 250;
-  --sidebar-primary-foreground: 15 23 42;
-  --sidebar-accent: 30 41 59;
-  --sidebar-accent-foreground: 241 245 249;
-  --sidebar-border: 51 65 85;
-  --sidebar-ring: 96 165 250;
+  --sidebar: 17 24 39; /* Slate-900 */
+  --sidebar-foreground: 248 250 251;
+  --sidebar-primary: 59 130 246;
+  --sidebar-primary-foreground: 17 24 39;
+  --sidebar-accent: 30 41 55;
+  --sidebar-accent-foreground: 248 250 251;
+  --sidebar-border: 55 65 81;
+  --sidebar-ring: 59 130 246;
 }
 
 /* =====================================================
@@ -279,3 +279,147 @@
 @view-transition {
   navigation: auto;
 }
+
+/* =====================================================
+   PREMIUM SAAS POLISH - Subtle Animations & Effects
+===================================================== */
+
+/* Refined card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  border-color: rgb(var(--primary));
+  box-shadow: 0 1px 3px 0 rgba(59, 130, 246, 0.1), 0 1px 2px 0 rgba(59, 130, 246, 0.06);
+}
+
+/* Smooth backdrop blur effect */
+.backdrop-blur-premium {
+  backdrop-filter: blur(12px) brightness(1.02);
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Premium glass morphism */
+.glass-premium {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-premium {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle scale animation for CTAs */
+@keyframes subtle-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle-scale {
+  animation: subtle-scale 3s ease-in-out infinite;
+}
+
+/* Premium shadow system */
+.shadow-premium-sm {
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+}
+
+.shadow-premium-md {
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+}
+
+.shadow-premium-xl {
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
+.dark .shadow-premium-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow-premium-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-premium-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Refined text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium button hover states */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Link hover effects */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Input field refinements */
+input,
+textarea,
+select {
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Premium data visualization */
+.chart-container {
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+}
+
+/* Staggered animation utility */
+.stagger-child {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.stagger-child:nth-child(1) { animation-delay: 0.1s; }
+.stagger-child:nth-child(2) { animation-delay: 0.2s; }
+.stagger-child:nth-child(3) { animation-delay: 0.3s; }
+.stagger-child:nth-child(4) { animation-delay: 0.4s; }
+.stagger-child:nth-child(5) { animation-delay: 0.5s; }
+.stagger-child:nth-child(6) { animation-delay: 0.6s; }
