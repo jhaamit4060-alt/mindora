@@ -1,10 +1,15 @@
 import { MongoClient, type Db } from "mongodb"
 
-if (!process.env.MONGODB_URI) {
-  throw new Error("Please add your MongoDB URI to .env.local")
+const uri = process.env.MONGODB_URI
+
+if (!uri) {
+  throw new Error("MONGODB_URI environment variable is not set. Please add it to .env.local")
 }
 
-const uri = process.env.MONGODB_URI
+if (!uri.startsWith("mongodb://") && !uri.startsWith("mongodb+srv://")) {
+  throw new Error(`Invalid MONGODB_URI format. Got: ${uri.substring(0, 50)}... Expected to start with 'mongodb://' or 'mongodb+srv://'`)
+}
+
 const options = {}
 
 let client: MongoClient
@@ -27,7 +32,7 @@ if (process.env.NODE_ENV === "development") {
 
 export async function getDatabase(): Promise<Db> {
   const client = await clientPromise
-  return client.db("mental_wellness")
+  return client.db("mindora")
 }
 
 export default clientPromise
