@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { ExerciseTimer } from "@/components/exercise-timer"
 import { EXERCISES, getRecommendedExercises } from "@/lib/exercises-data"
 import { Check, Wind, ArrowLeft, Sparkles, TrendingUp, Filter, BookmarkCheck, Youtube } from "lucide-react"
 
@@ -161,14 +162,17 @@ export default function ExercisesPage() {
                   </AlertDescription>
                 </Alert>
 
-                <Button
-                  onClick={() => handleComplete(selectedExerciseData.id)}
-                  disabled={isCompleting}
-                  className="w-full h-12 text-base font-semibold shadow-lg hover:shadow-xl transition-all"
-                  size="lg"
-                >
-                  {isCompleting ? "Saving..." : "Mark as completed"}
-                </Button>
+                {/* Exercise Timer */}
+                <ExerciseTimer
+                  exerciseId={selectedExerciseData.id}
+                  exerciseTitle={selectedExerciseData.title}
+                  recommendedDuration={parseInt(selectedExerciseData.duration.split("-")[0])}
+                  onComplete={() => {
+                    setCompletedToday(new Set([...completedToday, selectedExerciseData.id]))
+                    setSelectedExercise(null)
+                  }}
+                  isCompleting={isCompleting}
+                />
               </CardContent>
             </Card>
           </div>

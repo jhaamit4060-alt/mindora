@@ -3,6 +3,7 @@ import { findUserById, getMoodEntries } from "@/lib/db-helpers"
 import { redirect } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { AnalyticsExport } from "@/components/analytics-export"
 import {
   TrendingUp,
   BarChart3,
@@ -228,23 +229,16 @@ export default async function UserAnalyticsPage() {
         </Card>
 
         {/* Export Section */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <FileDown className="w-5 h-5 text-primary" />
-              Export Your Report
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-4">
-              Download a comprehensive PDF report of your emotional intelligence analytics for professional or personal use.
-            </p>
-            <Button className="gap-2" size="lg">
-              <FileDown className="w-4 h-4" />
-              Generate & Download Report
-            </Button>
-          </CardContent>
-        </Card>
+        <AnalyticsExport
+          userId={user.userId}
+          stats={{
+            avgMood: parseFloat(avgMood as string),
+            allMoods,
+            highestMood,
+            lowestMood,
+            moodVariance,
+          }}
+        />
       </div>
     </div>
   )
