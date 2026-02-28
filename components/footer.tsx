@@ -32,19 +32,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/features" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                  Features
+                </Link>
+              </li>
+              <li>
                 <Link href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Dashboard
                 </Link>
               </li>
               <li>
-                <Link href="/analytics" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/(protected)/analytics" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Analytics
                 </Link>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
-                  Features
-                </a>
               </li>
             </ul>
           </div>
@@ -54,31 +54,31 @@ export function Footer() {
             <h3 className="font-semibold text-sm tracking-wide uppercase text-foreground">Company</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
-                  About
-                </a>
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                  About Us
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Legal & Support */}
           <div className="space-y-6">
-            <h3 className="font-semibold text-sm tracking-wide uppercase text-foreground">Legal</h3>
+            <h3 className="font-semibold text-sm tracking-wide uppercase text-foreground">Legal & Support</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
@@ -86,19 +86,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                <Link href="/cookies" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
                   Cookie Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="mailto:support@mindora.app" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
-                  Support
-                </a>
+                <Link href="/support" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">
+                  Support Center
+                </Link>
               </li>
             </ul>
           </div>
