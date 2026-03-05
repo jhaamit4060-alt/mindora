@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, Lock, Eye, Download, Trash2, CheckCircle2, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Privacy & Security - Mindora",
@@ -10,7 +12,8 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-16 md:py-24 border-b border-border">
         <div className="container mx-auto px-4 max-w-3xl space-y-6">
@@ -237,6 +240,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

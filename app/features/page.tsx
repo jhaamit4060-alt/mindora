@@ -14,6 +14,8 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Features - Mindora Emotional Intelligence Analytics",
@@ -22,7 +24,8 @@ export const metadata = {
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-20 md:py-32 border-b border-border/50">
         <div className="container mx-auto px-4 text-center space-y-6 max-w-3xl mx-auto">
@@ -120,6 +123,8 @@ export default function FeaturesPage() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

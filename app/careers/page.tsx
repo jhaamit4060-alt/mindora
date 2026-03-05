@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Briefcase, Users, Zap, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Careers at Mindora - Join Our Team",
@@ -61,7 +63,8 @@ const jobs = [
 
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-20 md:py-32 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl space-y-8 text-center">
@@ -197,6 +200,8 @@ export default function CareersPage() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

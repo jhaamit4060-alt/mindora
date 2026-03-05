@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Cookie Policy - Mindora",
@@ -7,7 +9,8 @@ export const metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-16 md:py-24 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl space-y-6">
@@ -105,6 +108,8 @@ export default function CookiePolicyPage() {
           </Card>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

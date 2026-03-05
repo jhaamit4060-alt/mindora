@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Contact Us - Mindora Support",
@@ -9,7 +11,8 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-20 md:py-32 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl space-y-6 text-center">
@@ -175,6 +178,8 @@ function ContactItem({
         <h3 className="font-semibold">{title}</h3>
         <p className="text-muted-foreground text-sm">{desc}</p>
       </div>
+
+      <Footer />
     </div>
   )
 

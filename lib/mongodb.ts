@@ -1,9 +1,21 @@
 import { MongoClient, type Db } from "mongodb"
 
-const uri = process.env.MONGODB_URI
+let uri = process.env.MONGODB_URI
 
 if (!uri) {
   throw new Error("MONGODB_URI is not set in environment variables. Please add it to .env.local")
+}
+
+// Remove the key name if it's included in the value (e.g., "MONGODB_URI=mongodb+srv://...")
+if (uri.startsWith("MONGODB_URI=")) {
+  uri = uri.replace("MONGODB_URI=", "")
+}
+
+// Trim whitespace
+uri = uri.trim()
+
+if (!uri.startsWith("mongodb://") && !uri.startsWith("mongodb+srv://")) {
+  throw new Error(`Invalid MONGODB_URI. Expected to start with 'mongodb://' or 'mongodb+srv://', but got: ${uri.substring(0, 50)}...`)
 }
 
 const options = {

@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Calendar, User } from "lucide-react"
 import Link from "next/link"
+import { NavHeaderPublic } from "@/components/nav-header-public"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Blog - Mindora Emotional Intelligence Insights",
@@ -73,7 +75,8 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <NavHeaderPublic />
       {/* Header */}
       <section className="py-20 md:py-32 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl space-y-6 text-center">
@@ -169,6 +172,8 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }
