@@ -14,10 +14,6 @@ if (uri.startsWith("MONGODB_URI=")) {
 // Trim whitespace
 uri = uri.trim()
 
-if (!uri.startsWith("mongodb://") && !uri.startsWith("mongodb+srv://")) {
-  throw new Error(`Invalid MONGODB_URI. Expected to start with 'mongodb://' or 'mongodb+srv://', but got: ${uri.substring(0, 50)}...`)
-}
-
 const options = {
   maxPoolSize: 10,
 }
