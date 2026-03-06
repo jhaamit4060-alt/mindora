@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
+import { NavHeaderPublic } from "@/components/nav-header-public"
 import {
   TrendingUp,
   BarChart3,
@@ -16,9 +17,11 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background dark:bg-background text-foreground overflow-hidden">
-      {/* Premium Hero Section */}
-      <section className="relative pt-24 pb-28 md:pt-40 md:pb-48">
+    <div className="min-h-screen bg-background dark:bg-background text-foreground overflow-hidden flex flex-col">
+      <NavHeaderPublic />
+      <main className="flex-1">
+        {/* Premium Hero Section */}
+        <section className="relative pt-24 pb-28 md:pt-40 md:pb-48">
         <div className="absolute inset-0 overflow-hidden -z-10">
           <div className="absolute -top-32 right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 left-1/3 w-96 h-96 bg-secondary/8 rounded-full blur-3xl"></div>
@@ -191,6 +194,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
